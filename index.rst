@@ -291,7 +291,7 @@ Data Exfil
 .. figure:: ./images/sestoken.png
    :alt: sestoken
 |
--  Use aws cli to list and search buckets the stolen credentails have access to
+-  Use aws cli to list buckets the stolen credentails have access to
 
 .. code:: bash
    
