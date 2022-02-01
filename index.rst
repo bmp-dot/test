@@ -244,8 +244,8 @@ Discovery
 .. figure:: ./images/pacukeys.png
    :alt: keys
 
-Findings
-********
+Results
+*******
 
 -  Use pacu to start disocvery using the following modules
 
@@ -263,7 +263,7 @@ Findings
 -  The stolen credentials have full access to S3
 -  Exit pacu by typing ``exit`` and return to attack
    
-Steal Data
+Data Exfil
 **********
 
 -  Create a new aws profile with stolen credentials
