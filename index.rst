@@ -96,7 +96,7 @@ Install tools for attack (Ubuntu)
          sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
 
    -  Update to add the repository, and install the Terraform CLI
-   -  
+  
       .. code:: bash
 
          sudo apt-get update && sudo apt-get install terraform
@@ -107,15 +107,15 @@ Install Cloudgoat
 -  Use git to clone the Cloudgoat repo to home directory and change to
    the new directory
 
-   .. code:: bash     
+.. code:: bash     
    
-      git clone https://github.com/RhinoSecurityLabs/cloudgoat.git ~/cloudgoat && cd ~/cloudgoat
+    git clone https://github.com/RhinoSecurityLabs/cloudgoat.git ~/cloudgoat && cd ~/cloudgoat
    
 -  Install the Cloudgoat dependencies
 
-   .. code:: bash
+.. code:: bash
 
-      pip3 install -r ./core/python/requirements.txt && chmod u+x cloudgoat.py
+    pip3 install -r ./core/python/requirements.txt && chmod u+x cloudgoat.py
 
 Install Pacu
 ############
@@ -123,15 +123,15 @@ Install Pacu
 -  Use git to clone the Pacu repo to home directory and change to the
    new directory
 
-   .. code:: bash
+.. code:: bash
 
-      git clone https://github.com/RhinoSecurityLabs/pacu.git ~/pacu && cd ~/pacu
+    git clone https://github.com/RhinoSecurityLabs/pacu.git ~/pacu && cd ~/pacu
 
 -  Install the Pacu dependencies
  
-   .. code:: bash      
+.. code:: bash      
    
-      pip3 install -r requirements.txt
+    pip3 install -r requirements.txt
 
 
 Setup AWS Profile
@@ -144,24 +144,24 @@ Setup AWS Profile
 -  You will be prompted for
    ``Access Key ID, AWS Secret Access Key, Default region name, Default output format``
 
-   .. code:: bash
+.. code:: bash
 
-      aws configure --profile cloudgoat
+    aws configure --profile cloudgoat
 
 -  Make the new aws profile your default
 
-   .. code:: bash
+.. code:: bash
 
-      export AWS_PROFILE=cloudgoat
+   export AWS_PROFILE=cloudgoat
 
 -  Verify credentials are working
 
-   .. code:: bash
+.. code:: bash
 
-       aws sts get-caller-identity
+    aws sts get-caller-identity
 
-   .. figure:: ./images/awsprofile.png
-      :alt: awsprofile
+.. figure:: ./images/awsprofile.png
+    :alt: awsprofile
    
 Setup Cloudgoat
 ###############
@@ -171,13 +171,13 @@ Setup Cloudgoat
   previous step which we called ``cloudgoat``. This is how cloudgoat
   will access AWS. 
       
-  .. code:: bash
+.. code:: bash
       
-     ~/cloudgoat/cloudgoat.py config profile
+    ~/cloudgoat/cloudgoat.py config profile
 
 - Run Cloudgoat config whitlelist
    
-  .. code:: bash
+.. code:: bash
 
     ~/cloudgoat/cloudgoat.py config whitelist --auto
 
@@ -190,9 +190,9 @@ Create vulnerable infrastructure
 
 -  Run the attack scenario
 
-   .. code:: bash
+.. code:: bash
    
-      ~/cloudgoat/cloudgoat.py create cloud_breach_s3
+    ~/cloudgoat/cloudgoat.py create cloud_breach_s3
 
 .. figure:: ./images/cloudgoatout.png
    :alt: cgsetup
@@ -291,44 +291,44 @@ Steal Data
 -  Manually add the ``aws_session_token`` to the aws credentails file
    (use i for insert mode then esc :wq to save and close)
 
-   .. code:: bash
+.. code:: bash
 
-      vi  ~/.aws/credentials
+   vi  ~/.aws/credentials
 
-   .. figure:: ./images/sestoken.png
-      :alt: sestoken
+.. figure:: ./images/sestoken.png
+   :alt: sestoken
 
 -  List and search buckets the stolen credentails have access to
 
-   .. code:: bash
+.. code:: bash
    
-      aws s3 ls --profile cloud_breach_s3
+    aws s3 ls --profile cloud_breach_s3
    
-   .. figure:: ./images/list.png
-      :alt: list
+.. figure:: ./images/list.png
+    :alt: list
 
 -  Download data from the ``cardholder-data`` bucket to local system
    home directory. Replace ``<bucket-name>`` with the bucket to download
    data
 
-   .. code:: bash  
+.. code:: bash  
    
-      aws s3 sync s3://<bucket-name> ~/cardholder-data --profile cloud_breach_s3
+    aws s3 sync s3://<bucket-name> ~/cardholder-data --profile cloud_breach_s3
 
 -  Change to home directory and perfom list to verify data was
    downloaded 
    
-   .. code:: bash 
+.. code:: bash 
    
-      cd && ls
+    cd && ls
    
-   .. figure:: ./images/download.png
-      :alt: verify
+.. figure:: ./images/download.png
+    :alt: verify
 
 -  Remove vulnerable infrasturecure
 
-   .. code:: bash 
-   
-      ~/cloudgoat/cloudgoat.py destroy cloud_breach_s3
+.. code:: bash 
+
+    ~/cloudgoat/cloudgoat.py destroy cloud_breach_s3
 
 -  Attack had been completed. Review the detections in dfaws dashboard.
