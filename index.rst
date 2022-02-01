@@ -303,14 +303,19 @@ bucket.
 -  Download data from the ``cardholder-data`` bucket to local system
    home directory. Replace ``<bucket-name>`` with the bucket to download
    data
-   .. code:: bash  aws s3 sync s3://<bucket-name> ~/cardholder-data --profile cloud_breach_s3
+
+   .. code:: bash  
+   
+   aws s3 sync s3://<bucket-name> ~/cardholder-data --profile cloud_breach_s3
 
 -  Change to home directory and perfom list to verify data was
    downloaded 
-   .. code:: bash cd && ls
+   .. code:: bash 
+   cd && ls
    .. figure:: ./images/download.png
 
 -  Remove vulnerable infrasturecure
-   .. code:: bash ~/cloudgoat/cloudgoat.py destroy cloud_breach_s3
+   .. code:: 
+   bash ~/cloudgoat/cloudgoat.py destroy cloud_breach_s3
 
 -  Attack had been completed. Review the detections in dfaws dashboard.
