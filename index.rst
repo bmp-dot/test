@@ -161,8 +161,8 @@ Setup AWS Profile
 
    .. figure:: ./images/awsprofile.png
    
-   Setup Cloudgoat
-   ###############
+Setup Cloudgoat
+###############
 
    -  Run Cloudgoat config profile from home directory and set default
       profile. You will be prompted to enter an AWS profile from the
@@ -179,8 +179,8 @@ Setup AWS Profile
 
        ~/cloudgoat/cloudgoat.py config whitelist --auto
 
-Setup vulnerable infrastructure with Cloudgoat
-##############################################
+Create vulnerable infrastructure
+################################
 
 Now that the tools are seutp we will use Cloudgoat to setup vulnerable
 infastuecure in AWS. This will create a scenario with a misconfigured
@@ -190,9 +190,6 @@ reverse-proxy server in EC2.
    .. code:: bash     ~/cloudgoat/cloudgoat.py create cloud_breach_s3
 
 .. figure:: ./images/cloudgoatout.png
-
-
-   Cloudgoat
 
 -  **Copy the response to a text file** you will need the EC2 IP
 
@@ -207,8 +204,8 @@ keys to discover, access, and exfiltrate sensitive data from an S3
 bucket.
 
 
-   Steal Role
-   ##########
+Steal Role
+**********
 
 -  Replace ``<ec2-ip-address>`` with the IP address from the previoues
    step to get a role name. **Copy the response to a text file** as you
@@ -221,8 +218,8 @@ bucket.
 .. figure:: ./images/role.png
 
 
-   Steal Crendentials
-   ******************
+Steal Crendentials
+******************
 
 -  Replace ``<ec2-ip-address>`` and ``<ec2-role-name>`` from the
    previous steps to get the keys. **Copy response to text file** as you
@@ -235,8 +232,8 @@ bucket.
 .. figure:: ./images/ssrf2.png
 
 
-   Discovery 
-   *********
+Discovery 
+*********
 
 -  Next we will use pacu to do discovery with the stolen crendentials
 
@@ -247,8 +244,8 @@ bucket.
 
 .. figure:: ./images/pacukeys.png
 
-   Output
-   ******
+Findings
+********
 
 -  Use pacu to start disocvery using the following modules
 
@@ -262,7 +259,6 @@ bucket.
 
 .. figure:: ./images/output.png
    :alt: output
-
 
 -  The stolen credentials have full access to S3
 
@@ -300,7 +296,7 @@ bucket.
       aws s3 ls --profile cloud_breach_s3
    
    .. figure:: ./images/list.png
-   
+      :alt: list
 
 -  Download data from the ``cardholder-data`` bucket to local system
    home directory. Replace ``<bucket-name>`` with the bucket to download
@@ -318,6 +314,7 @@ bucket.
       cd && ls
    
    .. figure:: ./images/download.png
+      :alt: verify
 
 -  Remove vulnerable infrasturecure
 
