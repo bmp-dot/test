@@ -1,6 +1,7 @@
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: ToC:
+   :hidden:
 
    index
 
@@ -49,14 +50,13 @@ Requirments
       configured <https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-profiles.html>`__
 
 Install system prerequisites (may already be installed)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
+******************************************************************
 .. code:: bash
 
    sudo apt-get update && sudo apt install -y ssh vim net-tools curl git python3-pip 
 
 Install tools for attack (may already be installed)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+***************************************************
 
 -  Install awscli
 
@@ -105,7 +105,7 @@ Install tools for attack (may already be installed)
          sudo apt-get update && sudo apt-get install terraform
 
 Install Cloudgoat
-~~~~~~~~~~~~~~~~~
+#################
 
 -  Use git to clone the Cloudgoat repo to home directory and change to
    the new directory
@@ -114,7 +114,7 @@ Install Cloudgoat
    ``bash       pip3 install -r ./core/python/requirements.txt && chmod u+x cloudgoat.py``
 
 Install Pacu
-~~~~~~~~~~~~
+############
 
 -  Use git to clone the Pacu repo to home directory and change to the
    new directory
@@ -123,7 +123,7 @@ Install Pacu
    ``bash       pip3 install -r requirements.txt``
 
 Setup AWS Profile
-~~~~~~~~~~~~~~~~~
+#################
 
 -  Setup AWS profile for Cloudgoat. This account will need admin access
    in AWS. This will create or add a new profile in ``~/.aws/config``
@@ -158,7 +158,7 @@ Setup AWS Profile
       ``bash  ~/cloudgoat/cloudgoat.py config whitelist --auto``
 
 Setup vulnerable infrastructure with Cloudgoat
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+##############################################
 
 Now that the tools are seutp we will use Cloudgoat to setup vulnerable
 infastuecure in AWS. This will create a scenario with a misconfigured
@@ -175,7 +175,7 @@ reverse-proxy server in EC2.
 -  **Copy the response to a text file** you will need the EC2 IP
 
 Start attack
-~~~~~~~~~~~~
+############
 
 At this point we have created vulnerable infrastucute in AWS using
 Cloudgoat. Starting as an anonymous outsider with no access or
