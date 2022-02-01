@@ -164,20 +164,20 @@ Setup AWS Profile
 Setup Cloudgoat
 ###############
 
-   -  Run Cloudgoat config profile from home directory and set default
-      profile. You will be prompted to enter an AWS profile from the
-      previous step which we called ``cloudgoat``. This is how cloudgoat
-      will access AWS. 
+- Run Cloudgoat config profile from home directory and set default
+  profile. You will be prompted to enter an AWS profile from the
+  previous step which we called ``cloudgoat``. This is how cloudgoat
+  will access AWS. 
       
-      .. code:: bash
+  .. code:: bash
       
-         ~/cloudgoat/cloudgoat.py config profile
+     ~/cloudgoat/cloudgoat.py config profile
 
-   -  Run Cloudgoat config whitlelist
+-  Run Cloudgoat config whitlelist
    
-      .. code:: bash
+   .. code:: bash
 
-         ~/cloudgoat/cloudgoat.py config whitelist --auto
+      ~/cloudgoat/cloudgoat.py config whitelist --auto
 
 Create vulnerable infrastructure
 ################################
