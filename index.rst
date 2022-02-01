@@ -191,6 +191,7 @@ Create vulnerable infrastructure
 .. figure:: ./images/cloudgoatout.png
    :alt: cgsetup
 
+
 -  **Copy the response to a text file** you will need the EC2 IP
 
 Start attack
