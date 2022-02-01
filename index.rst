@@ -38,8 +38,8 @@ Requirments
    sufficient privileges to create and destroy resources.
    -  AWS `Named profile configured <https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-profiles.html>`
 
-Build attacker host
-###################
+Build attacker machine
+######################
 -  Install common packages
 
   .. code:: bash
