@@ -9,7 +9,7 @@ Vectra DfAWS
 ************
 
 Objective
-#########
++++++++++
 Quick attack to get account in critical quadrant (~20 minutes). -
 Detections include - AWS Organization Discovery - AWS User Permissions
 Enumeration - AWS Suspicious Credential Usage - AWS Suspicious EC2
@@ -19,14 +19,13 @@ Enumeration - AWS S3 Enumeration
    :alt: critical
 
 Lab Notes
-#########
++++++++++
 -  There are other ways to install the tools and will depend on distro.
 -  Setting up the AWS profile may very based on an organizations
    requirements. For instance SSO would vary between org.
 
 Requirments
-###########
-
++++++++++++
 -  Linux or MacOS. Windows is not officially supported.
 
    -  If you are using Windows we recommand install
@@ -231,8 +230,8 @@ Steal Crendentials
 .. figure:: ./images/ssrf2.png
    :alt: creds
 
-Discovery 
-*********
+Pacu Discovery 
+**************
 
 -  Next we will use pacu to do discovery with the stolen crendentials
 
@@ -244,8 +243,8 @@ Discovery
 .. figure:: ./images/pacukeys.png
    :alt: keys
 
-Results
-*******
+Pacu Results
+************
 
 -  Use pacu to start disocvery using the following modules
 
