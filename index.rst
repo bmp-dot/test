@@ -43,7 +43,7 @@ Requirments
       configured <https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-profiles.html>`__
 
 Build attacker machine
-######################
+++++++++++++++++++++++
 -  Install common packages
 
    .. code:: bash
@@ -97,7 +97,7 @@ Build attacker machine
          sudo apt-get update && sudo apt-get install terraform
 
 Install Cloudgoat
-*****************
++++++++++++++++++
 -  Use git to clone the Cloudgoat repo to home directory and change to
    the new directory
 
@@ -112,7 +112,7 @@ Install Cloudgoat
     pip3 install -r ./core/python/requirements.txt && chmod u+x cloudgoat.py
 
 Install Pacu
-************
+++++++++++++
 
 -  Use git to clone the Pacu repo to home directory and change to the
    new directory
@@ -128,7 +128,7 @@ Install Pacu
     pip3 install -r requirements.txt
 
 Setup AWS Profile
-*****************
++++++++++++++++++
 
 -  Setup AWS profile for Cloudgoat. This account will need admin access
    in AWS. This will create or add a new profile in ``~/.aws/config``
@@ -157,7 +157,7 @@ Setup AWS Profile
     :alt: awsprofile
    
 Setup Cloudgoat
-***************
++++++++++++++++
 
 - Run Cloudgoat config profile from home directory and set default
   profile. You will be prompted to enter an AWS profile from the
@@ -175,7 +175,7 @@ Setup Cloudgoat
     ~/cloudgoat/cloudgoat.py config whitelist --auto
 
 Create vulnerable infrastructure
-********************************
+++++++++++++++++++++++++++++++++
 
 - Now that the tools are seutp we will use Cloudgoat to setup vulnerable
   infastuecure in AWS. This will create a scenario with a misconfigured
@@ -203,7 +203,7 @@ keys to discover, access, and exfiltrate sensitive data from an S3
 bucket.
 
 Steal Role
-**********
+++++++++++
 
 -  Replace ``<ec2-ip-address>`` with the IP address from the previoues
    step to get a role name. **Copy the response to a text file** as you
@@ -217,7 +217,7 @@ Steal Role
    :alt: role
 
 Steal Crendentials
-******************
+++++++++++++++++++
 
 -  Replace ``<ec2-ip-address>`` and ``<ec2-role-name>`` from the
    previous steps to get the keys. **Copy response to text file** as you
@@ -231,7 +231,7 @@ Steal Crendentials
    :alt: creds
 
 Pacu Discovery 
-**************
+++++++++++++++
 
 -  Next we will use pacu to do discovery with the stolen crendentials
 
@@ -244,7 +244,7 @@ Pacu Discovery
    :alt: keys
 
 Pacu Results
-************
+++++++++++++
 
 -  Use pacu to start disocvery using the following modules
 
@@ -263,7 +263,7 @@ Pacu Results
 -  Exit pacu by typing ``exit`` and return to attack
    
 Data Exfil
-**********
+++++++++++
 
 -  Create a new aws profile with stolen credentials
 
