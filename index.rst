@@ -40,62 +40,63 @@ Requirments
    -  AWS `Named profile
       configured <https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-profiles.html>`__
 
-Install system requirements (Ubuntu)
-#####################################
-.. code:: bash
+
+Build attacker host
+###################
+- Install common packages
+
+  .. code:: bash
 
    sudo apt-get update && sudo apt install -y ssh vim net-tools curl git python3-pip 
 
-Install tools for attack (Ubuntu)
-#################################
--  Install awscli
+- Install awscli
 
-   -  Download the package
+   - Download the package
 
       .. code:: bash
 
          curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 
-   -  Unzip the installer
+   - Unzip the installer
 
       .. code:: bash
 
          unzip awscliv2.zip
 
-   -  Run the install program
+   - Run the install program
 
       .. code:: bash
 
          sudo ./aws/install
 
--  Install terraform
+- Install terraform
 
-   -  Terraform Prerequisites
+   - Terraform Prerequisites
 
       .. code:: bash
 
          sudo apt-get update && sudo apt-get install -y gnupg software-properties-common
 
-   -  Add the HashiCorp GPG key
+   - Add the HashiCorp GPG key
 
       .. code:: bash
 
          curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
 
-   -  Add the official HashiCorp Linux repository
+   - Add the official HashiCorp Linux repository
 
       .. code:: bash
 
          sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
 
-   -  Update to add the repository, and install the Terraform CLI
+   - Update to add the repository, and install the Terraform CLI
   
       .. code:: bash
 
          sudo apt-get update && sudo apt-get install terraform
 
 Install Cloudgoat
-#################
+*****************
 -  Use git to clone the Cloudgoat repo to home directory and change to
    the new directory
 
@@ -110,7 +111,7 @@ Install Cloudgoat
     pip3 install -r ./core/python/requirements.txt && chmod u+x cloudgoat.py
 
 Install Pacu
-############
+************
 
 -  Use git to clone the Pacu repo to home directory and change to the
    new directory
@@ -126,7 +127,7 @@ Install Pacu
     pip3 install -r requirements.txt
 
 Setup AWS Profile
-#################
+*****************
 
 -  Setup AWS profile for Cloudgoat. This account will need admin access
    in AWS. This will create or add a new profile in ``~/.aws/config``
@@ -155,7 +156,7 @@ Setup AWS Profile
     :alt: awsprofile
    
 Setup Cloudgoat
-###############
+***************
 
 - Run Cloudgoat config profile from home directory and set default
   profile. You will be prompted to enter an AWS profile from the
