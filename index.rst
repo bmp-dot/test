@@ -98,7 +98,7 @@ Install tools for attack (Ubuntu)
          sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
 
    -  Update to add the repository, and install the Terraform CLI
-
+   -  
       .. code:: bash
 
          sudo apt-get update && sudo apt-get install terraform
@@ -108,11 +108,14 @@ Install Cloudgoat
 
 -  Use git to clone the Cloudgoat repo to home directory and change to
    the new directory
+
    .. code:: bash     
    
    git clone https://github.com/RhinoSecurityLabs/cloudgoat.git ~/cloudgoat && cd ~/cloudgoat
 -  Install the Cloudgoat dependencies
+-  
    .. code:: bash
+
    pip3 install -r ./core/python/requirements.txt && chmod u+x cloudgoat.py
 
 Install Pacu
@@ -120,10 +123,17 @@ Install Pacu
 
 -  Use git to clone the Pacu repo to home directory and change to the
    new directory
-   .. code:: bash     
+
+   .. code:: bash
+
    git clone https://github.com/RhinoSecurityLabs/pacu.git ~/pacu && cd ~/pacu
+
 -  Install the Pacu dependencies
-   .. code:: bash      pip3 install -r requirements.txt
+-  
+   .. code:: bash      
+   
+   pip3 install -r requirements.txt
+
 
 Setup AWS Profile
 #################
@@ -151,14 +161,25 @@ Setup AWS Profile
 
        aws sts get-caller-identity
 
-   |awsprofile| ### Setup Cloudgoat
+   .. figure:: ./images/awsprofile.png
+   
+   Setup Cloudgoat
+   ###############
 
    -  Run Cloudgoat config profile from home directory and set default
       profile. You will be prompted to enter an AWS profile from the
       previous step which we called ``cloudgoat``. This is how cloudgoat
-      will access AWS. ``bash  ~/cloudgoat/cloudgoat.py config profile``
+      will access AWS. 
+      
+      .. code:: bash
+      
+      ~/cloudgoat/cloudgoat.py config profile
+
    -  Run Cloudgoat config whitlelist
-      ``bash  ~/cloudgoat/cloudgoat.py config whitelist --auto``
+   -  
+      .. code:: bash
+
+       ~/cloudgoat/cloudgoat.py config whitelist --auto
 
 Setup vulnerable infrastructure with Cloudgoat
 ##############################################
@@ -168,7 +189,7 @@ infastuecure in AWS. This will create a scenario with a misconfigured
 reverse-proxy server in EC2.
 
 -  Run the attack scenario
-   ``bash      ~/cloudgoat/cloudgoat.py create cloud_breach_s3``
+   .. code:: bash     ~/cloudgoat/cloudgoat.py create cloud_breach_s3
 
 .. figure:: ./images/cloudgoatout.png
 
@@ -274,22 +295,21 @@ bucket.
       :alt: sestoken
 
 -  List and search buckets the stolen credentails have access to
-   ``bash  aws s3 ls --profile cloud_breach_s3`` |list|
+   .. code:: bash  aws s3 ls --profile cloud_breach_s3
+   .. figure:: ./images/list.png
+   
 
 -  Download data from the ``cardholder-data`` bucket to local system
    home directory. Replace ``<bucket-name>`` with the bucket to download
    data
-   ``bash  aws s3 sync s3://<bucket-name> ~/cardholder-data --profile cloud_breach_s3``
+   .. code:: bash  aws s3 sync s3://<bucket-name> ~/cardholder-data --profile cloud_breach_s3
 
 -  Change to home directory and perfom list to verify data was
-   downloaded ``bash  cd && ls`` |download|
+   downloaded 
+   .. code:: bash cd && ls
+   .. figure:: ./images/download.png
 
 -  Remove vulnerable infrasturecure
-   ``bash  ~/cloudgoat/cloudgoat.py destroy cloud_breach_s3``
+   .. code:: bash ~/cloudgoat/cloudgoat.py destroy cloud_breach_s3
 
 -  Attack had been completed. Review the detections in dfaws dashboard.
-
-.. |awsprofile| image:: ./images/awsprofile.png
-.. |list| image:: ./images/list.png
-.. |download| image:: ./images/download.png
-
