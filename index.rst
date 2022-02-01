@@ -111,13 +111,13 @@ Install Cloudgoat
 
    .. code:: bash     
    
-   git clone https://github.com/RhinoSecurityLabs/cloudgoat.git ~/cloudgoat && cd ~/cloudgoat
+      git clone https://github.com/RhinoSecurityLabs/cloudgoat.git ~/cloudgoat && cd ~/cloudgoat
    
 -  Install the Cloudgoat dependencies
 
    .. code:: bash
 
-   pip3 install -r ./core/python/requirements.txt && chmod u+x cloudgoat.py
+      pip3 install -r ./core/python/requirements.txt && chmod u+x cloudgoat.py
 
 Install Pacu
 ############
@@ -127,13 +127,13 @@ Install Pacu
 
    .. code:: bash
 
-   git clone https://github.com/RhinoSecurityLabs/pacu.git ~/pacu && cd ~/pacu
+      git clone https://github.com/RhinoSecurityLabs/pacu.git ~/pacu && cd ~/pacu
 
 -  Install the Pacu dependencies
  
    .. code:: bash      
    
-   pip3 install -r requirements.txt
+      pip3 install -r requirements.txt
 
 
 Setup AWS Profile
@@ -209,8 +209,9 @@ EC2 metadata service and acquire instance profile keys. Then, use those
 keys to discover, access, and exfiltrate sensitive data from an S3
 bucket.
 
-   ##########
+
    Steal Role
+   ##########
 
 -  Replace ``<ec2-ip-address>`` with the IP address from the previoues
    step to get a role name. **Copy the response to a text file** as you
