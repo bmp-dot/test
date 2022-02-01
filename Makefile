@@ -2,18 +2,15 @@
 #
 
 # You can set these variables from the command line.
-SPHINXOPTS    = -j auto -n -a
+SPHINXOPTS    =
 SPHINXBUILD   = sphinx-build
-SPHINXPROJ    = Vectra
+SPHINXPROJ    = BXP
 SOURCEDIR     = .
 BUILDDIR      = _build
 
 # Put it first so that "make" without argument is like "make help".
 help:
 	@$(SPHINXBUILD) -M help "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
-
-clean:
-	rm --recursive --force --verbose $(BUILDDIR) && mkdir $(BUILDDIR) || true
 
 .PHONY: help Makefile
 
