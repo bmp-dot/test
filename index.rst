@@ -49,14 +49,14 @@ Requirments
    -  AWS `Named profile
       configured <https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-profiles.html>`__
 
-Install system prerequisites (may already be installed)
-******************************************************************
+Install system prerequisites (Ubuntu)
+#####################################
 .. code:: bash
 
    sudo apt-get update && sudo apt install -y ssh vim net-tools curl git python3-pip 
 
-Install tools for attack (may already be installed)
-***************************************************
+Install tools for attack (Ubuntu)
+#################################
 
 -  Install awscli
 
