@@ -63,7 +63,6 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 #
 
 html_theme = ["sphinxawesome_theme"]
-sphinxawesome_theme
 #html_theme = 'alabaster'
 #html_theme = 'bootstrap'
 #html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
