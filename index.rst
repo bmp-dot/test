@@ -193,7 +193,7 @@ Create vulnerable infrastructure
 
 .. figure:: ./images/cloudgoatout.png
    :alt: cgsetup
-
+|
 .. note::  **Copy the response to a text file** you will need the EC2 IP
 
 Start attack
@@ -210,8 +210,8 @@ Steal Role
 ++++++++++
 
 -  Replace ``<ec2-ip-address>`` with the IP address from the previoues
-   step to get a role name. **Copy the response to a text file** as you
-   will need the role name for the next attack
+   step to get a role name. 
+.. note:: **Copy the response to a text file** as you will need the role name for the next attack
 
 .. code:: bash
 
@@ -246,7 +246,7 @@ Pacu Discovery
 
 .. figure:: ./images/pacukeys.png
    :alt: keys
-
+|
 Pacu Results
 ++++++++++++
 
