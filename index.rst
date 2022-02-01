@@ -112,8 +112,9 @@ Install Cloudgoat
    .. code:: bash     
    
    git clone https://github.com/RhinoSecurityLabs/cloudgoat.git ~/cloudgoat && cd ~/cloudgoat
+   
 -  Install the Cloudgoat dependencies
--  
+
    .. code:: bash
 
    pip3 install -r ./core/python/requirements.txt && chmod u+x cloudgoat.py
@@ -129,7 +130,7 @@ Install Pacu
    git clone https://github.com/RhinoSecurityLabs/pacu.git ~/pacu && cd ~/pacu
 
 -  Install the Pacu dependencies
--  
+ 
    .. code:: bash      
    
    pip3 install -r requirements.txt
