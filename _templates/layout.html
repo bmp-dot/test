@@ -1,13 +1,6 @@
 {# Import the theme's layout. #}
 {% extends "!layout.html" %}
 
-
-{%- if display_toc %}
-  <h3><a href="{{ pathto(master_doc) }}">{{ _('Table Of Contents') }}</a></h3>
-  {{ toc }}
-{%- endif %}
-
-
 {# Add Font Awesome stylesheet #}
 {%- block extrahead %}
 {{ super() }}
