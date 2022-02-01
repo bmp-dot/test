@@ -10,7 +10,7 @@ Vectra DfAWS
 
 Objective
 =========
-Quick attack to get account in critical quadrant (~20 minutes). 
+Quick attack to get account in critical quadrant (~20 minutes)
 -  Detections include 
 -  AWS Organization Discovery 
 -  AWS User Permissions Enumeration 
