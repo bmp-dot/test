@@ -10,7 +10,6 @@ Vectra DfAWS
 
 Objective
 #########
-
 Quick attack to get account in critical quadrant (~20 minutes). -
 Detections include - AWS Organization Discovery - AWS User Permissions
 Enumeration - AWS Suspicious Credential Usage - AWS Suspicious EC2
@@ -21,16 +20,13 @@ Enumeration - AWS S3 Enumeration
 
 Lab Notes
 #########
-
 -  There are other ways to install the tools and will depend on distro.
 -  Setting up the AWS profile may very based on an organizations
    requirements. For instance SSO would vary between org.
 
 Requirments
 ###########
-
 -  Linux or MacOS. Windows is not officially supported.
-
    -  If you are using Windows we recommand install
       `WSL2 <https://docs.microsoft.com/en-us/windows/wsl/install>`__
    -  If you are using a Linux virtual machine AWS EC2 is not supported
@@ -41,7 +37,6 @@ Requirments
 -  Terraform >= 0.14 installed and in your $PATH.
 -  The AWS CLI installed and in your $PATH, and an AWS account with
    sufficient privileges to create and destroy resources.
-
    -  AWS `Named profile
       configured <https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-profiles.html>`__
 
@@ -53,7 +48,6 @@ Install system requirements (Ubuntu)
 
 Install tools for attack (Ubuntu)
 #################################
-
 -  Install awscli
 
    -  Download the package
@@ -102,7 +96,6 @@ Install tools for attack (Ubuntu)
 
 Install Cloudgoat
 #################
-
 -  Use git to clone the Cloudgoat repo to home directory and change to
    the new directory
 
