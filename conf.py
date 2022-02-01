@@ -15,7 +15,6 @@ import sys
 import sphinx_bootstrap_theme
 import sphinx_fontawesome
 import sphinxawesome_theme
-import sphinxcontrib_fulltoc
 
 # sys.path.insert(0, os.path.abspath('.'))
 
