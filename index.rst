@@ -209,8 +209,8 @@ EC2 metadata service and acquire instance profile keys. Then, use those
 keys to discover, access, and exfiltrate sensitive data from an S3
 bucket.
 
+   ##########
    Steal Role
-   **********
 
 -  Replace ``<ec2-ip-address>`` with the IP address from the previoues
    step to get a role name. **Copy the response to a text file** as you
