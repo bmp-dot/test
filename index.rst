@@ -171,13 +171,13 @@ Setup Cloudgoat
       
       .. code:: bash
       
-      ~/cloudgoat/cloudgoat.py config profile
+         ~/cloudgoat/cloudgoat.py config profile
 
    -  Run Cloudgoat config whitlelist
-   -  
+   
       .. code:: bash
 
-       ~/cloudgoat/cloudgoat.py config whitelist --auto
+         ~/cloudgoat/cloudgoat.py config whitelist --auto
 
 Create vulnerable infrastructure
 ################################
@@ -187,7 +187,8 @@ infastuecure in AWS. This will create a scenario with a misconfigured
 reverse-proxy server in EC2.
 
 -  Run the attack scenario
-   .. code:: bash     ~/cloudgoat/cloudgoat.py create cloud_breach_s3
+   .. code:: bash     
+      ~/cloudgoat/cloudgoat.py create cloud_breach_s3
 
 .. figure:: ./images/cloudgoatout.png
 
