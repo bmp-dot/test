@@ -6,7 +6,7 @@
   :name: _dfaws
   :hidden:
 
-  what_is_dfaws/what_is_dfaws/
+   objective/objective/
 
 .. toctree::
   :maxdepth: 2
