@@ -4,9 +4,9 @@
 
    index
 
-************
+------------
 Vectra DfAWS
-************
+------------
 
 Objective
 +++++++++
@@ -19,13 +19,13 @@ Enumeration - AWS S3 Enumeration
    :alt: critical
 
 Lab Notes
-+++++++++
+#########
 -  There are other ways to install the tools and will depend on distro.
 -  Setting up the AWS profile may very based on an organizations
    requirements. For instance SSO would vary between org.
 
 Requirments
-+++++++++++
+###########
 -  Linux or MacOS. Windows is not officially supported.
 
    -  If you are using Windows we recommand install
@@ -43,7 +43,7 @@ Requirments
       configured <https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-profiles.html>`__
 
 Build attacker machine
-++++++++++++++++++++++
+######################
 -  Install common packages
 
    .. code:: bash
