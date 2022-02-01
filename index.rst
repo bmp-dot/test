@@ -19,10 +19,7 @@ Enumeration - AWS S3 Enumeration
 
 .. figure:: ./images/critical.png
 
-
-   critical
-
-Guide Notes
+Lab Notes
 ###########
 
 -  There are other ways to install the tools and will depend on distro.
