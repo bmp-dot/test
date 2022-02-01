@@ -8,7 +8,6 @@
 Vectra DfAWS
 ************
 
-
 Objective
 #########
 
@@ -133,7 +132,6 @@ Install Pacu
    
     pip3 install -r requirements.txt
 
-
 Setup AWS Profile
 #################
 
@@ -209,7 +207,6 @@ EC2 metadata service and acquire instance profile keys. Then, use those
 keys to discover, access, and exfiltrate sensitive data from an S3
 bucket.
 
-
 Steal Role
 **********
 
@@ -224,7 +221,6 @@ Steal Role
 .. figure:: ./images/role.png
    :alt: role
 
-
 Steal Crendentials
 ******************
 
@@ -238,7 +234,6 @@ Steal Crendentials
 
 .. figure:: ./images/ssrf2.png
    :alt: creds
-
 
 Discovery 
 *********
@@ -270,8 +265,7 @@ Findings
    :alt: output
 
 -  The stolen credentials have full access to S3
-
-   -  Exit pacu by typing ``exit`` and return to attack
+-  Exit pacu by typing ``exit`` and return to attack
    
 Steal Data
 **********
@@ -313,7 +307,7 @@ Steal Data
 
 .. code:: bash  
    
-    aws s3 sync s3://<bucket-name> ~/cardholder-data --profile cloud_breach_s3
+   aws s3 sync s3://<bucket-name> ~/cardholder-data --profile cloud_breach_s3
 
 -  Change to home directory and perfom list to verify data was
    downloaded 
