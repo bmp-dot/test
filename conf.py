@@ -22,7 +22,7 @@ import sphinx_pdj_theme
 
 # -- Project information -----------------------------------------------------
 
-project = 'Vectra dfaws'
+project = 'Vectra dfaws Attack Lab'
 copyright = '2022, Vectra AI'
 author = 'bxp'
 
@@ -58,8 +58,11 @@ master_doc = 'index'
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
 latex_elements = {
-  'extraclassoptions': 'openany,oneside'
+  'extraclassoptions': 'openany,oneside',
+  'figure_align': 'H'
 }
+
+
 
 
 # -- Options for HTML output -------------------------------------------------
