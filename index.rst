@@ -44,7 +44,7 @@ Build attacker machine
 ######################
 -  Install common packages
 
-  .. code:: bash
+   .. code:: bash
 
      sudo apt-get update && sudo apt install -y ssh vim net-tools curl git python3-pip 
 
