@@ -10,10 +10,13 @@ Vectra DfAWS
 
 Objective
 =========
-Quick attack to get account in critical quadrant (~20 minutes). -
-Detections include - AWS Organization Discovery - AWS User Permissions
-Enumeration - AWS Suspicious Credential Usage - AWS Suspicious EC2
-Enumeration - AWS S3 Enumeration
+Quick attack to get account in critical quadrant (~20 minutes). 
+-  Detections include 
+-  AWS Organization Discovery 
+-  AWS User Permissions Enumeration 
+-  AWS Suspicious Credential Usage 
+-  AWS Suspicious EC2 Enumeration 
+-  AWS S3 Enumeration
 
 .. figure:: ./images/critical.png
    :alt: critical
@@ -179,7 +182,7 @@ Create vulnerable infrastructure
 ++++++++++++++++++++++++++++++++
 
 - Now that the tools are seutp we will use Cloudgoat to setup vulnerable
-  infastuecure in AWS. This will create a scenario with a misconfigured
+  infrastructure in AWS. This will create a scenario with a misconfigured
   reverse-proxy server in EC2.
 
 -  Run the attack scenario
