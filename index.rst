@@ -20,7 +20,7 @@ Enumeration - AWS S3 Enumeration
 .. figure:: ./images/critical.png
 
 Lab Notes
-###########
+#########
 
 -  There are other ways to install the tools and will depend on distro.
 -  Setting up the AWS profile may very based on an organizations
@@ -173,7 +173,7 @@ Setup Cloudgoat
       
      ~/cloudgoat/cloudgoat.py config profile
 
--  Run Cloudgoat config whitlelist
+- Run Cloudgoat config whitlelist
    
    .. code:: bash
 
@@ -182,12 +182,14 @@ Setup Cloudgoat
 Create vulnerable infrastructure
 ################################
 
-Now that the tools are seutp we will use Cloudgoat to setup vulnerable
-infastuecure in AWS. This will create a scenario with a misconfigured
-reverse-proxy server in EC2.
+- Now that the tools are seutp we will use Cloudgoat to setup vulnerable
+  infastuecure in AWS. This will create a scenario with a misconfigured
+  reverse-proxy server in EC2.
 
 -  Run the attack scenario
-   .. code:: bash     
+
+   .. code:: bash
+   
       ~/cloudgoat/cloudgoat.py create cloud_breach_s3
 
 .. figure:: ./images/cloudgoatout.png
@@ -319,7 +321,7 @@ Findings
 
 -  Remove vulnerable infrasturecure
 
-   .. code:: 
-      bash ~/cloudgoat/cloudgoat.py destroy cloud_breach_s3
+   .. code:: bash 
+      ~/cloudgoat/cloudgoat.py destroy cloud_breach_s3
 
 -  Attack had been completed. Review the detections in dfaws dashboard.
