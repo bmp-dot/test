@@ -27,8 +27,7 @@ Lab Notes
 Requirments
 ###########
 -  Linux or MacOS. Windows is not officially supported.
-   -  If you are using Windows we recommand install
-      `WSL2 <https://docs.microsoft.com/en-us/windows/wsl/install>`__
+   -  If you are using Windows we recommand install`WSL2 <https://docs.microsoft.com/en-us/windows/wsl/install>`__
    -  If you are using a Linux virtual machine AWS EC2 is not supported
    -  In this guide a new Ubuntu VM was created in VM Fusion. This guide
       goes through setting up the Ubuntu VM.
@@ -43,21 +42,21 @@ Requirments
 
 Build attacker host
 ###################
-- Install common packages
+-  Install common packages
 
   .. code:: bash
 
    sudo apt-get update && sudo apt install -y ssh vim net-tools curl git python3-pip 
 
-- Install awscli
+-  Install awscli
 
-   - Download the package
+   -  Download the package
 
       .. code:: bash
 
          curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 
-   - Unzip the installer
+   -  Unzip the installer
 
       .. code:: bash
 
@@ -69,27 +68,27 @@ Build attacker host
 
          sudo ./aws/install
 
-- Install terraform
+-  Install terraform
 
-   - Terraform Prerequisites
+   -  Terraform Prerequisites
 
       .. code:: bash
 
          sudo apt-get update && sudo apt-get install -y gnupg software-properties-common
 
-   - Add the HashiCorp GPG key
+   -  Add the HashiCorp GPG key
 
       .. code:: bash
 
          curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
 
-   - Add the official HashiCorp Linux repository
+   -  Add the official HashiCorp Linux repository
 
       .. code:: bash
 
          sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
 
-   - Update to add the repository, and install the Terraform CLI
+   -  Update to add the repository, and install the Terraform CLI
   
       .. code:: bash
 
@@ -174,7 +173,7 @@ Setup Cloudgoat
     ~/cloudgoat/cloudgoat.py config whitelist --auto
 
 Create vulnerable infrastructure
-################################
+********************************
 
 - Now that the tools are seutp we will use Cloudgoat to setup vulnerable
   infastuecure in AWS. This will create a scenario with a misconfigured
