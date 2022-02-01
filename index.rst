@@ -62,7 +62,7 @@ Build attacker host
 
          unzip awscliv2.zip
 
-   - Run the install program
+   -  Run the install program
 
       .. code:: bash
 
