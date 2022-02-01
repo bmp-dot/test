@@ -12,4 +12,3 @@ sphinxcontrib-fulltoc == 1.2.0
 sphinx-bootstrap-theme == 0.8.0
 sphinx_fontawesome
 sphinxawesome_theme
-sphinxcontrib_fulltoc
