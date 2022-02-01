@@ -94,7 +94,7 @@ html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
 # (Optional) Logo. Should be small enough to fit the navbar (ideally 24x24).
 # Path should be relative to the ``_static`` files directory.
 
-html_logo = "NutanixWorkshops.svg"
+html_logo = "VextraLogo.svg"
 
 html_favicon = "favicon.ico"
 
@@ -189,4 +189,4 @@ html_static_path = ['_static']
 # -- Options for HTMLHelp output ------------------------------------------
 
 # Output file base name for HTML help builder.
-#htmlhelp_basename = 'NutanixLabsdoc'
+#htmlhelp_basename = 'BXP'
