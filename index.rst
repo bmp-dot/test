@@ -9,7 +9,7 @@ Vectra DfAWS
 ------------
 
 Objective
-+++++++++
+#########
 Quick attack to get account in critical quadrant (~20 minutes). -
 Detections include - AWS Organization Discovery - AWS User Permissions
 Enumeration - AWS Suspicious Credential Usage - AWS Suspicious EC2
@@ -41,6 +41,7 @@ Requirments
 
    -  AWS `Named profile
       configured <https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-profiles.html>`__
+
 
 Build attacker machine
 ######################
