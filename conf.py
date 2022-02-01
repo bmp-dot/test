@@ -22,12 +22,12 @@ import sphinxcontrib_fulltoc
 
 # -- Project information -----------------------------------------------------
 
-project = 'bxp'
-copyright = '2022, bxp'
+project = 'Vectra dfaws'
+copyright = '2022, Vectra AI'
 author = 'bxp'
 
 # The full version, including alpha/beta/rc tags
-release = 'bxp'
+release = '1.0.0'
 
 
 # -- General configuration ---------------------------------------------------
