@@ -194,8 +194,7 @@ Create vulnerable infrastructure
 .. figure:: ./images/cloudgoatout.png
    :alt: cgsetup
 
-
--  **Copy the response to a text file** you will need the EC2 IP
+.. note::  **Copy the response to a text file** you will need the EC2 IP
 
 Start attack
 ============
@@ -225,8 +224,8 @@ Steal Crendentials
 ++++++++++++++++++
 
 -  Replace ``<ec2-ip-address>`` and ``<ec2-role-name>`` from the
-   previous steps to get the keys. **Copy response to text file** as you
-   will need these stolen crendentials
+   previous steps to get the keys.
+.. note::  **Copy response to text file** as you will need these stolen crendentials
 
 .. code:: bash
 
