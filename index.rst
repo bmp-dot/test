@@ -159,7 +159,7 @@ Setup AWS Profile
 
 .. figure:: ./images/awsprofile.png
     :alt: awsprofile
-   
+|   
 Setup Cloudgoat
 +++++++++++++++
 
@@ -194,7 +194,7 @@ Create vulnerable infrastructure
 .. figure:: ./images/cloudgoatout.png
    :alt: cgsetup
 |
-.. note::  **Copy the response to a text file** you will need the EC2 IP
+.. note::  **Copy the response to a text file**.  You will need the EC2 IP
 
 Start attack
 ============
@@ -211,7 +211,7 @@ Steal Role
 
 -  Replace ``<ec2-ip-address>`` with the IP address from the previoues
    step to get a role name. 
-.. note:: **Copy the response to a text file** as you will need the role name for the next attack
+.. note:: **Copy the response to a text file**.  You will need the role
 
 .. code:: bash
 
@@ -219,13 +219,13 @@ Steal Role
 
 .. figure:: ./images/role.png
    :alt: role
-
+|
 Steal Crendentials
 ++++++++++++++++++
 
 -  Replace ``<ec2-ip-address>`` and ``<ec2-role-name>`` from the
    previous steps to get the keys.
-.. note::  **Copy response to text file** as you will need these stolen crendentials
+.. note::  **Copy response to text file**.  You will use the stolen credentials 
 
 .. code:: bash
 
@@ -233,7 +233,7 @@ Steal Crendentials
 
 .. figure:: ./images/ssrf2.png
    :alt: creds
-
+|
 Pacu Discovery 
 ++++++++++++++
 
@@ -262,7 +262,7 @@ Pacu Results
 
 .. figure:: ./images/output.png
    :alt: output
-
+|
 -  The stolen credentials have full access to S3
 -  Exit pacu by typing ``exit`` and return to attack
    
@@ -290,7 +290,7 @@ Data Exfil
 
 .. figure:: ./images/sestoken.png
    :alt: sestoken
-
+|
 -  List and search buckets the stolen credentails have access to
 
 .. code:: bash
@@ -299,7 +299,7 @@ Data Exfil
    
 .. figure:: ./images/list.png
     :alt: list
-
+|
 -  Download data from the ``cardholder-data`` bucket to local system
    home directory. Replace ``<bucket-name>`` with the bucket to download
    data
@@ -317,7 +317,7 @@ Data Exfil
    
 .. figure:: ./images/download.png
     :alt: verify
-
+|
 -  Remove vulnerable infrasturecure
 
 .. code:: bash 
