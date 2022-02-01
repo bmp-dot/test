@@ -118,9 +118,10 @@ Install Pacu
 
 -  Use git to clone the Pacu repo to home directory and change to the
    new directory
-   ``bash      git clone https://github.com/RhinoSecurityLabs/pacu.git ~/pacu && cd ~/pacu``
+   .. code:: bash     
+   git clone https://github.com/RhinoSecurityLabs/pacu.git ~/pacu && cd ~/pacu
 -  Install the Pacu dependencies
-   ``bash       pip3 install -r requirements.txt``
+   .. code:: bash      pip3 install -r requirements.txt
 
 Setup AWS Profile
 #################
