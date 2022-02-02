@@ -22,7 +22,7 @@ import sphinx_pdj_theme
 
 # -- Project information -----------------------------------------------------
 
-project = 'Vectra dfaws Attack Lab'
+project = 'Workshops'
 copyright = '2022, Vectra AI'
 author = 'bxp'
 
