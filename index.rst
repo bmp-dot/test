@@ -4,9 +4,9 @@
 
    index
 
-------------
-Vectra DfAWS
-------------
+--------------
+Detect for AWS
+--------------
 
 Objective
 =========
