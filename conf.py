@@ -90,6 +90,9 @@ html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 html_logo = "_static/vectra.png"
+html_css_files = [
+    'custom.css',
+]
 
 html_theme_options = {
     # Navigation bar title. (Default: ``project`` value)
