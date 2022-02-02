@@ -64,8 +64,7 @@ latex_elements = {
   'figure_align': 'H'
 }
 
-
-
+latex_toplevel_sectioning = 'section'
 
 # -- Options for HTML output -------------------------------------------------
 
