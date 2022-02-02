@@ -96,7 +96,7 @@ html_theme_options = {
     'navbar_title': "Workshops",
 
     # Tab name for entire site. (Default: "Site")
-    #'navbar_site_name': "Workshops",
+    'navbar_site_name': "Other Labs",
 
     # Render the next and previous page links in navbar. (Default: true)
     'navbar_sidebarrel': True,
@@ -140,7 +140,7 @@ html_theme_options = {
     # Currently, the supported themes are:
     # - Bootstrap 2: https://bootswatch.com/2
     # - Bootstrap 3: https://bootswatch.com/3
-    'bootswatch_theme': "united",
+    'bootswatch_theme': "default",
 
     # Choose Bootstrap version.
     # Values: "3" (default) or "2" (in quotes)
