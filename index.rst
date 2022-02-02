@@ -333,7 +333,7 @@ Data Exfil
 .. figure:: ./images/download.png
     :alt: verify
 
--  Remove vulnerable infrasturecure
+-  Remove vulnerable infrastructure
 
 .. code:: console 
 
