@@ -14,3 +14,4 @@ sphinx_fontawesome
 sphinxawesome_theme
 sphinxcontrib-fulltoc
 sphinx-pdj-theme
+guzzle_sphinx_theme
