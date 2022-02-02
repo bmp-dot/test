@@ -4,9 +4,9 @@
 
    index
 
-------------------
-Detect for AWS Lab
-------------------
+--------------
+Detect for AWS
+--------------
 |
 |
 What is Detect for AWS?
