@@ -59,57 +59,61 @@ Requirements
 
 Build attacker machine
 ======================
--  Install common packages
 
-   .. code:: console
+Install common packages
++++++++++++++++++++++++
 
-     sudo apt-get update && sudo apt install -y ssh vim net-tools curl git python3-pip 
+.. code:: console
 
--  Install awscli
+   sudo apt-get update && sudo apt install -y ssh vim net-tools curl git python3-pip 
 
-   -  Download the package
+Install awscli
+++++++++++++++
 
-      .. code:: console
+-  Download the package
 
-         curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+.. code:: console
 
-   -  Unzip the installer
+   curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 
-      .. code:: console
+-  Unzip the installer
 
-         unzip awscliv2.zip
+.. code:: console
 
-   -  Run the install program
+   unzip awscliv2.zip
 
-      .. code:: console
+-  Run the install program
 
-         sudo ./aws/install
+.. code:: console
 
--  Install terraform
+   sudo ./aws/install
 
-   -  Terraform Prerequisites
+Install terraform
++++++++++++++++++
 
-      .. code:: console
+-  Terraform Prerequisites
 
-         sudo apt-get update && sudo apt-get install -y gnupg software-properties-common
+.. code:: console
 
-   -  Add the HashiCorp GPG key
+   sudo apt-get update && sudo apt-get install -y gnupg software-properties-common
 
-      .. code:: console
+-  Add the HashiCorp GPG key
 
-         curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
+.. code:: console
 
-   -  Add the official HashiCorp Linux repository
+   curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
 
-      .. code:: console
+-  Add the official HashiCorp Linux repository
 
-         sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
+.. code:: console
 
-   -  Update to add the repository, and install the Terraform CLI
+   sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
+
+-  Update to add the repository, and install the Terraform CLI
   
-      .. code:: console
+.. code:: console
 
-         sudo apt-get update && sudo apt-get install terraform
+   sudo apt-get update && sudo apt-get install terraform
 
 Install Cloudgoat
 +++++++++++++++++
