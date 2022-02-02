@@ -8,6 +8,14 @@
 Detect for AWS
 --------------
 
+What is Detect for AWS?
+=======================
+Detect for AWS offers advanced Threat Detection & Response coverage for the AWS control plane. We leverage advanced AI & ML techniques to monitor all activity in
+an organization’s global AWS footprint for malicious behaviors. Detect for AWS leverages CloudTrail log and contextual IAM information to find malicious activity,
+and then attribute it to the malicious actor itself using Vectra’s Kingpin technology.  Detect for AWS is delivered as a SaaS (Software as a Service) solution in
+Vectra’s cloud.
+
+
 Objective
 =========
 Quick attack to get account in critical quadrant (~20 minutes)
@@ -208,8 +216,8 @@ EC2 metadata service and acquire instance profile keys. Then, use those
 keys to discover, access, and exfiltrate sensitive data from an S3
 bucket.
 
-Steal Role
-++++++++++
+Get Role Name
++++++++++++++
 
 -  Replace ``<ec2-ip-address>`` with the IP address from the previoues
    step to get a role name. 
@@ -222,8 +230,8 @@ Steal Role
    :alt: role
 
 .. note:: **Copy the response to a text file**.  You will need the role
-Steal Crendentials
-++++++++++++++++++
+Get Credentials
++++++++++++++++
 
 -  Replace ``<ec2-ip-address>`` and ``<ec2-role-name>`` from the
    previous steps to get the keys
