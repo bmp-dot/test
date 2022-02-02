@@ -108,7 +108,7 @@ html_theme_options = {
     'navbar_pagenav': True,
 
     # Tab name for the current pages TOC. (Default: "Page")
-    'navbar_pagenav_name': "Modules",
+    'navbar_pagenav_name': "Lab Modules",
 
     # Global TOC depth for "site" navbar tab. (Default: 1)
     # Switching to -1 shows all levels.
