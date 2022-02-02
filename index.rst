@@ -4,10 +4,10 @@
 
    index
 
---------------
-Detect for AWS
---------------
-
+------------------
+Detect for AWS Lab
+------------------
+|
 |
 What is Detect for AWS?
 =======================
@@ -17,9 +17,8 @@ an organization’s global AWS footprint for malicious behaviors. Detect for AWS
 and then attribute it to the malicious actor itself using Vectra’s Kingpin technology.  Detect for AWS is delivered as a SaaS (Software as a Service) solution in
 Vectra’s cloud.
 
-
-Objective
-=========
+Lab Objective
+=============
 Quick attack to get account in critical quadrant (~20 minutes)
 
 -  Detections include 
