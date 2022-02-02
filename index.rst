@@ -13,11 +13,11 @@ Objective
 Quick attack to get account in critical quadrant (~20 minutes)
 
 -  Detections include 
--  AWS Organization Discovery 
--  AWS User Permissions Enumeration 
--  AWS Suspicious Credential Usage 
--  AWS Suspicious EC2 Enumeration 
--  AWS S3 Enumeration
+   -  AWS Organization Discovery 
+   -  AWS User Permissions Enumeration 
+   -  AWS Suspicious Credential Usage 
+   -  AWS Suspicious EC2 Enumeration 
+   -  AWS S3 Enumeration
 
 .. figure:: ./images/critical.png
    :alt: critical
