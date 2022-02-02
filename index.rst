@@ -2,7 +2,8 @@
    :maxdepth: 2
    :hidden:
 
-   index
+   Objective
+   Lab Notes
 
 --------------
 Detect for AWS
@@ -27,8 +28,8 @@ Lab Notes
 -  Setting up the AWS profile may very based on an organizations
    requirements. For instance SSO would vary between org.
 
-Requirments
-===========
+Requirements
+============
 -  Linux or MacOS. Windows is not officially supported.
 
    -  If you are using Windows we recommand install
