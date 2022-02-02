@@ -16,6 +16,7 @@ import sphinx_bootstrap_theme
 import sphinx_fontawesome
 import sphinxawesome_theme
 import sphinx_pdj_theme
+import guzzle_sphinx_theme
 
 # sys.path.insert(0, os.path.abspath('.'))
 
@@ -43,7 +44,6 @@ extensions = ['sphinx.ext.todo',
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
-    'globaltoc_includehidden': "false",
 
 # The suffix(es) of source filenames.
 # You can specify multiple suffix as a list of string:
@@ -75,11 +75,15 @@ latex_elements = {
 
 #html_theme = 'sphinxawesome_theme'
 #html_theme = 'alabaster'
-html_theme = 'bootstrap'
-html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
+
+#html_theme = 'bootstrap'
+#html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
 
 #html_theme = 'sphinx_pdj_theme'
 #html_theme_path = [sphinx_pdj_theme.get_html_theme_path()]
+
+html_theme_path = guzzle_sphinx_theme.html_theme_path()
+html_theme = 'guzzle_sphinx_theme'
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
