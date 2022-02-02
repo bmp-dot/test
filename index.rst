@@ -161,7 +161,7 @@ Setup AWS Profile
 
 .. figure:: ./images/awsprofile.png
     :alt: awsprofile
-|   
+
 Setup Cloudgoat
 +++++++++++++++
 
@@ -195,7 +195,7 @@ Create vulnerable infrastructure
 
 .. figure:: ./images/cloudgoatout.png
    :alt: cgsetup
-|
+
 .. note::  **Copy the response to a text file**.  You will need the EC2 IP
 
 Start attack
@@ -220,7 +220,7 @@ Steal Role
 
 .. figure:: ./images/role.png
    :alt: role
-|
+
 .. note:: **Copy the response to a text file**.  You will need the role
 Steal Crendentials
 ++++++++++++++++++
@@ -234,7 +234,7 @@ Steal Crendentials
 
 .. figure:: ./images/ssrf2.png
    :alt: creds
-|
+
 .. note::  **Copy response to text file**.  You will use the stolen credentials
 Pacu Discovery 
 ++++++++++++++
@@ -248,7 +248,7 @@ Pacu Discovery
 
 .. figure:: ./images/pacukeys.png
    :alt: keys
-|
+
 Pacu Results
 ++++++++++++
 
@@ -264,7 +264,7 @@ Pacu Results
 
 .. figure:: ./images/output.png
    :alt: output
-|
+
 -  The stolen credentials have full access to S3
 -  Exit pacu by typing ``exit`` and return to attack
    
@@ -292,7 +292,7 @@ Data Exfil
 
 .. figure:: ./images/sestoken.png
    :alt: sestoken
-|
+
 -  Use aws cli to list buckets the stolen credentails have access to
 
 .. code:: bash
@@ -301,7 +301,7 @@ Data Exfil
    
 .. figure:: ./images/list.png
     :alt: list
-|
+
 -  Download data from the ``cardholder-data`` bucket to local system
    home directory. Replace ``<bucket-name>`` with the bucket to download
    data
@@ -319,11 +319,11 @@ Data Exfil
    
 .. figure:: ./images/download.png
     :alt: verify
-|
+
 -  Remove vulnerable infrasturecure
 
 .. code:: bash 
 
     ~/cloudgoat/cloudgoat.py destroy cloud_breach_s3
 
--  Attack had been completed. Review the detections in dfaws dashboard.
+-  Attack had been completed. Review the detections in dfaws dashboard
