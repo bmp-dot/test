@@ -96,19 +96,7 @@ html_theme_options = {
     'navbar_title': "Demo",
 
     # Tab name for entire site. (Default: "Site")
-    'navbar_site_name': "Site",
-
-    # A list of tuples containing pages or urls to link to.
-    # Valid tuples should be in the following forms:
-    #    (name, page)                 # a link to a page
-    #    (name, "/aa/bb", 1)          # a link to an arbitrary relative url
-    #    (name, "http://example.com", True) # arbitrary absolute url
-    # Note the "1" or "True" value above as the third argument to indicate
-    # an arbitrary url.
-    'navbar_links': [
-        ("Examples", "examples"),
-        ("Link", "http://example.com", True),
-    ],
+    'navbar_site_name': "Workshops",
 
     # Render the next and previous page links in navbar. (Default: true)
     'navbar_sidebarrel': True,
@@ -117,7 +105,7 @@ html_theme_options = {
     'navbar_pagenav': True,
 
     # Tab name for the current pages TOC. (Default: "Page")
-    'navbar_pagenav_name': "Page",
+    'navbar_pagenav_name': "Modules",
 
     # Global TOC depth for "site" navbar tab. (Default: 1)
     # Switching to -1 shows all levels.
@@ -132,9 +120,6 @@ html_theme_options = {
     # Values: "true" (default) or "false"
     'globaltoc_includehidden': "true",
 
-    # HTML navbar class (Default: "navbar") to attach to <div> element.
-    # For black navbar, do "navbar navbar-inverse"
-    'navbar_class': "navbar navbar-inverse",
 
     # Fix navigation bar to top of page?
     # Values: "true" (default) or "false"
@@ -155,7 +140,7 @@ html_theme_options = {
     # Currently, the supported themes are:
     # - Bootstrap 2: https://bootswatch.com/2
     # - Bootstrap 3: https://bootswatch.com/3
-    'bootswatch_theme': "sandstone",
+    'bootswatch_theme': "united",
 
     # Choose Bootstrap version.
     # Values: "3" (default) or "2" (in quotes)
