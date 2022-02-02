@@ -93,10 +93,10 @@ html_logo = "_static/vectra.png"
 
 html_theme_options = {
     # Navigation bar title. (Default: ``project`` value)
-    'navbar_title': "Demo",
+    'navbar_title': "Workshops",
 
     # Tab name for entire site. (Default: "Site")
-    'navbar_site_name': "Workshops",
+    #'navbar_site_name': "Workshops",
 
     # Render the next and previous page links in navbar. (Default: true)
     'navbar_sidebarrel': True,
