@@ -2,8 +2,7 @@
    :maxdepth: 2
    :hidden:
 
-   Objective
-   Lab Notes
+   index
 
 --------------
 Detect for AWS
