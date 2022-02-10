@@ -14,9 +14,6 @@ import os
 import sys
 import sphinx_bootstrap_theme
 import sphinx_fontawesome
-import sphinxawesome_theme
-import sphinx_pdj_theme
-import guzzle_sphinx_theme
 
 # sys.path.insert(0, os.path.abspath('.'))
 
@@ -107,7 +104,7 @@ html_theme_options = {
 
     # Global TOC depth for "site" navbar tab. (Default: 1)
     # Switching to -1 shows all levels.
-    'globaltoc_depth': 2,
+    'globaltoc_depth': 3,
 
     # Include hidden TOCs in Site navbar?
     #
