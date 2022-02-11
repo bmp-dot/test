@@ -4,9 +4,9 @@
 
    index
 
---------------
-Detect for AWS
---------------
+-----------------
+Detect for AWS BP
+-----------------
 |
 |
 What is Detect for AWS?
